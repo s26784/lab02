@@ -8,6 +8,7 @@ class Program
         Console.WriteLine("Hello, World!");
         int[] tbl = { 1, 2, 3, 4, 5 };
         Console.WriteLine(CalculateValue(tbl));
+        Console.WriteLine(FindMax(tbl));
     }
 
 
@@ -20,6 +21,20 @@ class Program
         }
 
         return value / tbl.Length;
+    }
+    
+    public static int FindMax(int[] tbl)
+    {
+        int max = tbl[0];
+        for (int i = 0; i < tbl.Length; i++)
+        {
+            if (max < tbl[i])
+            {
+                max = tbl[i];
+            }
+        }
+
+        return max;
     }
     
     String Str1 = "Tomasz";
